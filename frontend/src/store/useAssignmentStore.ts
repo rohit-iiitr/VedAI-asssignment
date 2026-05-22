@@ -77,8 +77,8 @@ interface AssignmentState {
   disconnectWebSocket: () => void;
 }
 
-const API_BASE = 'http://localhost:5001/api';
-const WS_BASE = 'ws://localhost:5001/ws';
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5001/api';
+const WS_BASE = process.env.NEXT_PUBLIC_WS_URL || 'ws://localhost:5001/ws';
 
 export const useAssignmentStore = create<AssignmentState>((set, get) => ({
   assignments: [],
