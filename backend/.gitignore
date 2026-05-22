@@ -1,0 +1,39 @@
+# Backend .gitignore
+
+# Node
+node_modules/
+
+# Build outputs
+dist/
+build/
+coverage/
+
+# dotenv
+.env
+.env.*
+
+# Logs
+npm-debug.log*
+logs/
+*.log
+
+# TypeScript
+*.tsbuildinfo
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# PM
+package-lock.json
+
+# Docker
+Dockerfile
+docker-compose.override.yml
+
+# Secrets
+*.pem
+
