@@ -20,7 +20,7 @@ export const generateAssessment = async (config: {
   }
 
   const apiKey = process.env.GEMINI_API_KEY;
-  if (!apiKey || apiKey.trim() === '' || apiKey === 'AIzaSyDfcPF8cdpfDIk-MhTYquwMixaCvR978sg' || apiKey.includes('PLACEHOLDER')) {
+  if (!apiKey || apiKey.trim() === '' || apiKey.includes('YOUR_GEMINI_API_KEY') || apiKey.includes('PLACEHOLDER')) {
     // If no real API key is present, let's return a beautiful mocked CBSE assignment so the app works seamlessly during evaluation!
     console.warn('GEMINI_API_KEY is not defined or is placeholder. Using high-fidelity mocked paper generator.');
     return generateMockAssessment(config);
