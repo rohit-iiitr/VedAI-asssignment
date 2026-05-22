@@ -1,17 +1,16 @@
 import { ConnectionOptions } from 'bullmq';
-import url from 'url';
 
 export const getRedisConnection = (): ConnectionOptions => {
   if (process.env.REDIS_URL) {
     try {
-      const parsed = url.parse(process.env.REDIS_URL);
+      const parsed = new URL(process.env.REDIS_URL);
       const isTls = parsed.protocol === 'rediss:';
       
       return {
         host: parsed.hostname || '127.0.0.1',
         port: parsed.port ? parseInt(parsed.port, 10) : 6379,
-        username: parsed.auth ? parsed.auth.split(':')[0] : undefined,
-        password: parsed.auth ? parsed.auth.split(':')[1] : undefined,
+        username: parsed.username || undefined,
+        password: parsed.password || undefined,
         tls: isTls ? {} : undefined,
         maxRetriesPerRequest: null, // Critical requirement for BullMQ compatibility
       };
