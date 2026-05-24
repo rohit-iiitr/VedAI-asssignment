@@ -103,33 +103,27 @@ button, input, select, textarea {
   gap: 32px;
   width: 100%;
 }
+/* .logo-area{
+  display:flex;
+  align-items:center;
+  gap:12px;
+} */
 
-.logo-area {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding-left: 8px;
+.logo-area{
+  width:flex;
+  height:50px;
+  object-fit:contain;
+  display:block;
 }
 
-.logo-icon {
-  background: linear-gradient(135deg, #F25430 0%, #FF8364 100%);
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #FFF;
-  font-weight: 800;
-  font-family: var(--font-heading);
-}
-
-.logo-text {
-  font-family: var(--font-heading);
-  font-size: 22px;
-  font-weight: 700;
-  color: #121212;
-  letter-spacing: -0.5px;
+.logo-text{
+  font-size:20px;
+  font-weight:700;
+  margin:0;
+  padding:0;
+  height:50px;              /* same as logo height */
+  display:flex;
+  align-items:center;       /* vertical center */
 }
 
 /* The Figma Beautiful Create Button with Orange Outline */

@@ -72,14 +72,14 @@ export default function Dashboard() {
 
         <div className="veda-dashboard-body">
           {/* Main Title Bar */}
-          <div className="assignments-header-bar">
+          {/* <div className="assignments-header-bar">
             <div>
               <h2 className="assignments-header-title">Assignments</h2>
               <span className="text-secondary" style={{ fontSize: '13px' }}>
                 Manage and create assignments for your classes.
               </span>
             </div>
-          </div>
+          </div> */}
 
           {error && (
             <div className="alert-error" style={{
@@ -108,31 +108,7 @@ export default function Dashboard() {
             <div className="empty-state-card">
               <div className="empty-illustration">
                 {/* Visual SVG illustration of Magnifying glass + document + Red cross mark */}
-                <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  {/* Backdrop shapes */}
-                  <path d="M40 85C40 80 50 78 55 84C60 90 40 90 40 85Z" fill="#FCECE9" />
-                  <path d="M140 100C140 95 150 93 155 99C160 105 140 105 140 100Z" fill="#DBEAFE" />
-                  
-                  {/* Document sheet */}
-                  <rect x="65" y="40" width="60" height="80" rx="6" fill="#F8F9FA" stroke="#D2D6DC" strokeWidth="2.5" />
-                  <line x1="75" y1="55" x2="115" y2="55" stroke="#E6E9EE" strokeWidth="2.5" strokeLinecap="round" />
-                  <line x1="75" y1="65" x2="115" y2="65" stroke="#E6E9EE" strokeWidth="2.5" strokeLinecap="round" />
-                  <line x1="75" y1="75" x2="105" y2="75" stroke="#E6E9EE" strokeWidth="2.5" strokeLinecap="round" />
-                  
-                  {/* Decorative swirling sparkles */}
-                  <path d="M35 50C45 42 50 60 52 50" stroke="#9BA4B0" strokeWidth="2" strokeLinecap="round" />
-                  
-                  {/* Magnifying Glass Handle */}
-                  <line x1="105" y1="105" x2="135" y2="135" stroke="#9BA4B0" strokeWidth="8" strokeLinecap="round" />
-                  <line x1="105" y1="105" x2="135" y2="135" stroke="#1A1C1E" strokeWidth="3" strokeLinecap="round" />
-                  
-                  {/* Lens */}
-                  <circle cx="85" cy="85" r="32" fill="#FFFFFF" fillOpacity="0.8" stroke="#D2D6DC" strokeWidth="3" />
-                  
-                  {/* Circular Red Cross Overlay */}
-                  <circle cx="85" cy="85" r="16" fill="#EF4444" />
-                  <path d="M79 79L91 91M91 79L79 91" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round" />
-                </svg>
+                <img src="illustrations.png" alt="Placeholder Image"></img>
               </div>
 
               <h3 className="empty-title">No assignments yet</h3>
@@ -148,6 +124,7 @@ export default function Dashboard() {
                 </button>
               </Link>
             </div>
+            
           ) : (
             /* --- FILLED STATE (ASSIGNMENTS GRID) --- */
             <>

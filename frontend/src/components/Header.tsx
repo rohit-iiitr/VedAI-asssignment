@@ -72,10 +72,15 @@ export default function Header({
               <span className="mobile-header-title">{subTitle || title}</span>
             </div>
           ) : (
-            <div className="logo-area-mobile">
-              <div className="logo-icon-mobile">V</div>
-              <span className="logo-text-mobile">VedaAI</span>
-            </div>
+            <div className="logo-area">
+                <img
+                  src="Frame 1618872393.png"
+                  alt="VedaAI Logo"
+                  width={180}
+                  height={50}
+                
+                />
+              </div>
           )}
         </div>
 
