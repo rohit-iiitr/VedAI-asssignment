@@ -108,7 +108,7 @@ export default function Dashboard() {
             <div className="empty-state-card">
               <div className="empty-illustration">
                 {/* Visual SVG illustration of Magnifying glass + document + Red cross mark */}
-                <img src="illustrations.png" alt="Placeholder Image"></img>
+                <img src="/illustrations.png" alt="Placeholder Image"></img>
               </div>
 
               <h3 className="empty-title">No assignments yet</h3>
